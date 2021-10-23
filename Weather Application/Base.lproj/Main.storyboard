@@ -15,13 +15,31 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Wqb-6t-2hf">
+                                <rect key="frame" x="0.0" y="44" width="453" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Wqb-6t-2hf" secondAttribute="height" multiplier="207:22" id="wOt-Nz-vOo"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Wqb-6t-2hf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7NP-1H-TUc"/>
+                            <constraint firstItem="Wqb-6t-2hf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8X7-ZX-6C0"/>
+                            <constraint firstItem="Wqb-6t-2hf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="B7E-5h-Avt"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="HJe-0I-blP"/>
+                    <connections>
+                        <outlet property="searchBar" destination="Wqb-6t-2hf" id="jdI-ef-XSr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23" y="68"/>
+            <point key="canvasLocation" x="1797.1014492753625" y="67.633928571428569"/>
         </scene>
     </scenes>
     <resources>
