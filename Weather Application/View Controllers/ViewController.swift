@@ -11,24 +11,27 @@ class ViewController: UIViewController, UISearchBarDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar!
     
+    let networkWeatherManager = NetworkWeatherManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         searchBar.delegate = self
-        //searchBar.showsCancelButton = true
+        
+        networkWeatherManager.fetchCurrentWeather(forCity: "Minsk")
+        
+        
+        }
+        
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        let urlString = "https://api.openweathermap.org/data/2.5/forecast?q=\(searchBar.text!)&appid=59c2249fd161e32ba0eaa80a8259b136"
-        let url = URL(string: urlString)
-        let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
-            
+//        let urlString = "https://api.openweathermap.org/data/2.5/forecast?q=\(searchBar.text!)&appid=\(apiKey)"
+        //searchBar.showsCancelButton = true
         }
         
-        task.resume()
-    }
-}
+        
+    
+
     
 
    

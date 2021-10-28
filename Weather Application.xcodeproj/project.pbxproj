@@ -14,6 +14,8 @@
 		CE7066822722B2F800E50BEC /* Weather_Application.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE7066802722B2F800E50BEC /* Weather_Application.xcdatamodeld */; };
 		CE7066842722B2FE00E50BEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7066832722B2FE00E50BEC /* Assets.xcassets */; };
 		CE7066872722B2FE00E50BEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7066852722B2FE00E50BEC /* LaunchScreen.storyboard */; };
+		CE7C771A272AFF7B007389F2 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C7719272AFF7B007389F2 /* Constans.swift */; };
+		CE7C771C272B11F2007389F2 /* NetworkWeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C771B272B11F1007389F2 /* NetworkWeatherManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		CE7066832722B2FE00E50BEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE7066862722B2FE00E50BEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE7066882722B2FE00E50BEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE7C7719272AFF7B007389F2 /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
+		CE7C771B272B11F1007389F2 /* NetworkWeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkWeatherManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +62,58 @@
 		CE7066762722B2F800E50BEC /* Weather Application */ = {
 			isa = PBXGroup;
 			children = (
-				CE7066772722B2F800E50BEC /* AppDelegate.swift */,
-				CE7066792722B2F800E50BEC /* SceneDelegate.swift */,
-				CE70667B2722B2F800E50BEC /* ViewController.swift */,
-				CE70667D2722B2F800E50BEC /* Main.storyboard */,
-				CE7066832722B2FE00E50BEC /* Assets.xcassets */,
-				CE7066852722B2FE00E50BEC /* LaunchScreen.storyboard */,
+				CE7C7711272AFE01007389F2 /* Extensions */,
+				CE7C7712272AFE14007389F2 /* Views */,
+				CE7C7713272AFE20007389F2 /* Models */,
+				CE7C7714272AFE2A007389F2 /* View Controllers */,
+				CE7C7715272AFE42007389F2 /* Support files */,
 				CE7066882722B2FE00E50BEC /* Info.plist */,
 				CE7066802722B2F800E50BEC /* Weather_Application.xcdatamodeld */,
 			);
 			path = "Weather Application";
+			sourceTree = "<group>";
+		};
+		CE7C7711272AFE01007389F2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CE7C7712272AFE14007389F2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE70667D2722B2F800E50BEC /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE7C7713272AFE20007389F2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE7C771B272B11F1007389F2 /* NetworkWeatherManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CE7C7714272AFE2A007389F2 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE70667B2722B2F800E50BEC /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		CE7C7715272AFE42007389F2 /* Support files */ = {
+			isa = PBXGroup;
+			children = (
+				CE7C7719272AFF7B007389F2 /* Constans.swift */,
+				CE7066772722B2F800E50BEC /* AppDelegate.swift */,
+				CE7066792722B2F800E50BEC /* SceneDelegate.swift */,
+				CE7066852722B2FE00E50BEC /* LaunchScreen.storyboard */,
+				CE7066832722B2FE00E50BEC /* Assets.xcassets */,
+			);
+			path = "Support files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +189,8 @@
 			files = (
 				CE70667C2722B2F800E50BEC /* ViewController.swift in Sources */,
 				CE7066782722B2F800E50BEC /* AppDelegate.swift in Sources */,
+				CE7C771A272AFF7B007389F2 /* Constans.swift in Sources */,
+				CE7C771C272B11F2007389F2 /* NetworkWeatherManager.swift in Sources */,
 				CE7066822722B2F800E50BEC /* Weather_Application.xcdatamodeld in Sources */,
 				CE70667A2722B2F800E50BEC /* SceneDelegate.swift in Sources */,
 			);
