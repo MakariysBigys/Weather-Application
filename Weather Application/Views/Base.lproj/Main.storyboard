@@ -17,9 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="jhd-Qg-3ez">
-                                <rect key="frame" x="-815" y="59" width="1386" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="123543534" translatesAutoresizingMaskIntoConstraints="NO" id="jhd-Qg-3ez">
+                                <rect key="frame" x="-511" y="0.0" width="1386" height="896"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jhd-Qg-3ez" secondAttribute="height" multiplier="99:64" id="nVC-5T-O41"/>
+                                </constraints>
                             </imageView>
                             <searchBar contentMode="redraw" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="Wqb-6t-2hf">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -49,8 +51,8 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Feels like: 23˚C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxU-z0-k8X">
-                                <rect key="frame" x="122" y="408" width="169" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Feels like: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxU-z0-k8X">
+                                <rect key="frame" x="122" y="403" width="108" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -63,6 +65,13 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="23˚C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gn5-Qw-VoS">
+                                <rect key="frame" x="231" y="403" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -70,10 +79,18 @@
                             <constraint firstItem="Wqb-6t-2hf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7NP-1H-TUc"/>
                             <constraint firstItem="Wqb-6t-2hf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8X7-ZX-6C0"/>
                             <constraint firstItem="Wqb-6t-2hf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="B7E-5h-Avt"/>
+                            <constraint firstItem="jhd-Qg-3ez" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-511" id="Yob-ta-sCw"/>
+                            <constraint firstItem="jhd-Qg-3ez" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="tbN-Mb-Bfp"/>
+                            <constraint firstAttribute="bottom" secondItem="jhd-Qg-3ez" secondAttribute="bottom" id="uj6-EK-AMx"/>
+                            <constraint firstAttribute="trailing" secondItem="jhd-Qg-3ez" secondAttribute="trailing" constant="-461" id="zhE-ti-1fu"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cityLabel" destination="xP7-Da-ndF" id="ui3-jc-NZs"/>
+                        <outlet property="feelsLikeTemperatureLabel" destination="Gn5-Qw-VoS" id="VlH-pR-PfE"/>
                         <outlet property="searchBar" destination="Wqb-6t-2hf" id="jdI-ef-XSr"/>
+                        <outlet property="temperatureLabel" destination="2KT-4b-faZ" id="h3F-q5-fID"/>
+                        <outlet property="weatherIconImageView" destination="Sx7-YN-RsU" id="HfT-y5-bYw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -82,7 +99,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background" width="640" height="417"/>
+        <image name="123543534" width="750" height="1334"/>
         <image name="cloud.sun" catalog="system" width="128" height="95"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

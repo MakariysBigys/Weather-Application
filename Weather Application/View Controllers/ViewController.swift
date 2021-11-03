@@ -7,8 +7,12 @@
 
 import UIKit
 
-class ViewController: UIViewController, UISearchBarDelegate {
+class ViewController: UIViewController {
     
+    @IBOutlet weak var feelsLikeTemperatureLabel: UILabel!
+    @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var weatherIconImageView: UIImageView!
+    @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var searchBar: UISearchBar!
     
     let networkWeatherManager = NetworkWeatherManager()
@@ -17,6 +21,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
         super.viewDidLoad()
         searchBar.delegate = self
         
+        
         networkWeatherManager.fetchCurrentWeather(forCity: "Minsk")
         
         
@@ -24,10 +29,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
         
     }
     
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-//        let urlString = "https://api.openweathermap.org/data/2.5/forecast?q=\(searchBar.text!)&appid=\(apiKey)"
-        //searchBar.showsCancelButton = true
-        }
+
         
         
     
