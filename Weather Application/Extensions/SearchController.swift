@@ -8,11 +8,12 @@
 import Foundation
 import UIKit
 
+
 extension ViewController: UISearchBarDelegate {
     
-    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
-
+        let searchBarText = searchBar.text!
+        print(searchBarText)
+        networkWeatherManager.fetchCurrentWeather(forCity: "\(searchBarText)")
     }
 }

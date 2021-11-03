@@ -23,13 +23,12 @@
                                     <constraint firstAttribute="width" secondItem="jhd-Qg-3ez" secondAttribute="height" multiplier="99:64" id="nVC-5T-O41"/>
                                 </constraints>
                             </imageView>
-                            <searchBar contentMode="redraw" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="Wqb-6t-2hf">
+                            <searchBar contentMode="redraw" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="Wqb-6t-2hf">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <color key="backgroundColor" red="0.3978441358" green="0.59831356999999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Wqb-6t-2hf" secondAttribute="height" multiplier="207:22" id="wOt-Nz-vOo"/>
                                 </constraints>
-                                <color key="tintColor" red="0.3978441358" green="0.59831356999999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="barTintColor" red="0.3978441358" green="0.59831356999999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>

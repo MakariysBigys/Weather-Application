@@ -16,21 +16,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     let networkWeatherManager = NetworkWeatherManager()
+    let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
+//        searchBar.showsCancelButton = true
         
         
-        networkWeatherManager.fetchCurrentWeather(forCity: "Minsk")
+//        networkWeatherManager.fetchCurrentWeather(forCity: "\(searchBar.text)")
         
         
         }
-        
-    }
     
+    }
 
-        
+
+
+
         
     
 
