@@ -12,7 +12,9 @@ import UIKit
 extension ViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        let searchBarText = searchBar.text!
+        guard var searchBarText = searchBar.text else { return }
+        searchBarText = searchBarText.split(separator: " ").joined(separator: "%20")
         networkWeatherManager.fetchCurrentWeather(forCity: "\(searchBarText)")
+        
     }
 }

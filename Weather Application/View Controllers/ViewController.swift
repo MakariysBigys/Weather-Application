@@ -16,7 +16,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     let networkWeatherManager = NetworkWeatherManager()
-    let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
